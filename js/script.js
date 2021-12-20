@@ -108,7 +108,7 @@ if (form) {
             let isCreated = create(username, email, password);
             if (isCreated) {
                 localStorage.setItem('isLogged', true);
-                window.location.href = "main.html";
+                window.location.href = "index.html";
             }
         }
     });
@@ -118,7 +118,7 @@ function checkIsAdmin(email, password) {
      if (admin.Email == email.value && admin.Password == password.value) {
          localStorage.setItem('isLogged', true);
          localStorage.setItem('isAdmin', true);
-         window.location.href = "main.html";
+         window.location.href = "index.html";
      }
 }
 if (form2) {
@@ -135,7 +135,7 @@ if (form2) {
                console.log(per.Email)
                if (per.Email == email.value && per.Password == password.value) {
                     localStorage.setItem('isLogged', true);
-                    window.location.href = "main.html";
+                    window.location.href = "index.html";
                } else {
                     $('#loginError').html('error');
                }
