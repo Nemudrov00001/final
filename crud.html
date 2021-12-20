@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Admin</title>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="images\global-news-4306.svg" type="images/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+
+
+
+
+  
+</head>
+
+<style>
+body{
+    background-image: url(http://wonderfulengineering.com/wp-content/uploads/2014/01/Technology-Wallpaper-12.jpg);
+}
+ .form {
+    font-size: 22px;
+    position: absolute;
+    top: 110px;
+    left: 800px;
+ }
+ .table.table-bordered {
+    font-weight: 700;
+    font-size: 22px;
+    position: absolute;
+    top: 500px;
+    left: 650px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: yellow;
+ }
+
+ .formlabel {
+    padding-bottom: 15px;
+ }
+
+.border{
+    border-style: dotted;
+    background-color: orange;
+
+}
+
+input{
+    font-size: large;
+}
+
+
+#img{
+    
+    
+    margin: 0px 50px;
+}
+.header-images{
+    margin: 20px 500px;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: auto;  
+    text-align: center;
+}
+
+
+#tblList thead{
+    background: darkred;
+    color: white;
+    width:100%;
+}
+
+.form-group{
+
+    top: 50px;
+}
+
+button {
+    width: 150px;
+    height: 70px;
+    border-radius: 10px;
+    color: #333;
+    font-size: 18px;
+background-color: red;
+position: absolute;
+left: 100px;
+
+}
+
+label{
+    background-color: purple;
+    color: yellow;
+}
+
+h1{
+    background-color: pink;
+    text-align: center;
+}
+
+h3{
+    background-color: lightblue;
+    position: absolute;
+left: 170px;
+font-size: x-large;
+}
+
+
+</style>
+  
+    </head>
+    <body>
+
+        <h1>Admin Panel!&#129321; &#127760; &#9997;</h1>
+        <span><h3>
+            Warnings!<br>
+            1.Must be @ symbol in email.<br>
+            2.Must be 3-15 letters in username.<br>
+            3.Must be 8-20 letters and numbers in password.
+     </h3>   </span>
+      
+        
+        <div class="page-header">
+            
+        </div>
+        
+        <div class="container">
+           <form id="frmPerson" class="form">
+                
+               <div class="border">
+            
+                 <div class="formlabel">
+                    
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Enter your email adress" />
+                        <span></span><br>
+                    </div> <hr>
+
+                    <div class="formlabel">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Enter your User name" />
+                        <span></span><br>
+                    </div> <hr>
+                    <div class="formlabel">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" />
+                        <span></span><br>
+                    </div> <hr>
+                    <div class="formlabel">
+                        <label for="password2">Is active</label>
+                        <input type="checkbox" id="isActiveUser" placeholder="Is active user" />
+                        <span>Error message</span><br><br>
+                    </div> 
+                <br> </div> <br>
+          
+                <button type="submit"><img src="https://cdn.dribbble.com/users/1238709/screenshots/4069900/success_celebration_800x600.gif" alt=""  width="50"><br><strong>Submit</strong></button>
+            </form>
+        </div>     
+        <br><br> <br>
+
+       
+        <div class="container">
+            <table id="tblList" class="table table-bordered"></table>
+        </div>
+
+        
+      
+     
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+ <script src="js/script.js"></script>
+  
+
+<script >
+  
+</script>
+
+
+</body>
+
+</html>

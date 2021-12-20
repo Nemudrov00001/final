@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images\global-news-4306.svg" type="images/png">
+    <title>Registret</title>
+    <style>
+        body {
+            background-image: url("https://i.pinimg.com/originals/3d/08/e0/3d08e03cb40252526fee2036a67f07f1.gif");
+   font-smoothing: antialiased;
+     font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: .75em;
+    line-height: 1.4;
+
+}
+
+#canvas{
+border-style: solid;
+border-radius: 50px;
+position: absolute;
+left: 800px;
+}
+
+.form{
+position: absolute;
+left: 800px;
+text-align: center;
+top: 170px;
+width: 300px;
+
+}
+
+input{
+    font-size: large;
+    text-align: center;
+    border: solid;
+    border-color: green;
+    border-radius: 100px;
+    padding: 25px;
+}
+
+
+.projects {
+    margin: 100px auto 30px;
+}
+
+.login-ways p, .signin {
+    text-align: center;
+}
+
+div {
+    display: block;
+}
+
+img{
+    position: absolute;
+    left: 600px;
+    bottom: 540px;
+    width: 350px;
+    height: 40px;
+}
+
+label{
+    background-color: yellow;
+    font-size: large;
+}
+
+button{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: pink;
+    font-size: large;
+
+}
+
+@media (max-width: 1284px) {
+   
+   .form{
+position: absolute;
+left: 500px;
+text-align: center;
+top: 170px;
+width: 300px;
+
+}
+}
+
+@media (max-width: 1024px) {
+   
+   .form{
+position: absolute;
+left: 400px;
+text-align: center;
+top: 170px;
+width: 300px;
+
+}
+}
+
+@media (max-width: 910px) {
+   
+   .form{
+position: absolute;
+left: 350px;
+text-align: center;
+top: 170px;
+width: 300px;
+
+}
+
+}
+
+@media (max-width: 728px) {
+   
+   .form{
+position: absolute;
+left: 250px;
+text-align: center;
+top: 170px;
+width: 300px;
+
+}
+
+}
+
+@media (max-width: 576px) {
+   
+   .form{
+position: absolute;
+left: 150px;
+text-align: center;
+top: 170px;
+width: 300px;
+
+}
+
+}
+
+
+@media (max-width: 458px) {
+   
+   .form{
+position: absolute;
+left: 100px;
+text-align: center;
+top: 170px;
+width: 300px;
+
+}
+
+}
+
+    </style>
+</head>
+
+<body>
+
+    <script >
+    var img = new Image();
+
+// User Variables - customize these to change the image being scrolled, its
+// direction, and the speed.
+
+img.src = 'https://images.thequint.com/thequint%2F2019-10%2Fdfca05dd-5e4f-4877-9571-6fd043a71d16%2FiStock_1013435204.jpg?rect=0%2C0%2C2121%2C1193';
+var CanvasXSize = 100;
+var CanvasYSize = 80;
+var speed = 30; //lower is faster
+var scale = 0.12;
+var y = -4.5; //vertical offset
+
+// Main program
+
+var dx = 0.75;
+var imgW;
+var imgH;
+var x = 0;
+var clearX;
+var clearY;
+var ctx;
+
+img.onload = function() {
+    imgW = img.width*scale;
+    imgH = img.height*scale;
+    if (imgW > CanvasXSize) { x = CanvasXSize-imgW; } // image larger than canvas
+    if (imgW > CanvasXSize) { clearX = imgW; } // image larger than canvas
+    else { clearX = CanvasXSize; }
+    if (imgH > CanvasYSize) { clearY = imgH; } // image larger than canvas
+    else { clearY = CanvasYSize; }
+    //Get Canvas Element
+    ctx = document.getElementById('canvas').getContext('2d');
+    //Set Refresh Rate
+    return setInterval(draw, speed);
+}
+
+function draw() {
+    //Clear Canvas
+    ctx.clearRect(0,0,clearX,clearY);
+    //If image is <= Canvas Size
+    if (imgW <= CanvasXSize) {
+        //reset, start from beginning
+        if (x > (CanvasXSize)) { x = 0; }
+        //draw aditional image
+        if (x > (CanvasXSize-imgW)) { ctx.drawImage(img,x-CanvasXSize+1,y,imgW,imgH); }
+    }
+    //If image is > Canvas Size
+    else {
+        //reset, start from beginning
+        if (x > (CanvasXSize)) { x = CanvasXSize-imgW; }
+        //draw aditional image
+        if (x > (CanvasXSize-imgW)) { ctx.drawImage(img,x-imgW+1,y,imgW,imgH); }
+    }
+    //draw image
+    ctx.drawImage(img,x,y,imgW,imgH);
+    //amount to move
+    x += dx;
+}
+  </script>
+
+  <canvas id="canvas" width="250" height="400"></canvas>
+
+   
+
+
+
+
+        <div class="form-container">
+            <form id="form" class="form">
+                
+               
+            
+                 <div class="formlabel">
+                    
+                        <label for="email"><em><strong>Email  </strong> </em> <br></label>
+                        <input type="text" id="email" placeholder="Enter your email adress" />
+                        <span>Error message</span><br>
+                    </div>
+
+                    <div class="formlabel">
+                        <label for="username"><em><strong>Username</strong></em></label>
+                        <input type="text" id="username" placeholder="Enter your User name" />
+                        <span>Error message</span><br>
+                    </div>
+                    <div class="formlabel">
+                        <label for="password"><em><strong>Password</strong></em></label>
+                        <input type="password" id="password" placeholder="Enter your password" />
+                        <span>Error message</span><br>
+                    </div>
+                    <div class="formlabel">
+                        <label for="password2"><em><strong>Confirm Password</strong></em></label>
+                        <input type="password" id="password2" placeholder="Confirm your password" />
+                        <span>Error message</span><br>
+                    </div> 
+                <br>
+          
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+    <script src="js/script.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/1.6.1/kute.min.js"></script>
+
+
+
+</body>
+
+</html>
+

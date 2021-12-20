@@ -1,0 +1,156 @@
+.body_hide {
+  opacity: 0;
+  transition: .7s opacity ease-in-out;
+}
+.body_visible {
+  opacity: 1;
+}
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 12px;
+  grid-template-columns: auto auto auto;
+  background-image: url("https://innet-media.com/wp-content/uploads/2019/04/featured-image.jpg");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 1900px;
+  height: 1200px; 
+  padding: 80px 5px 5px 5px;
+
+}
+
+.grid-container a {
+text-decoration: none;
+color: red;
+cursor: default;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 50px;
+color: #333 ;
+}
+
+.grid-item a { 
+  color: red;
+  text-decoration: none;
+
+ }
+
+.grid-item img{
+  border-radius: 20px;
+}
+
+.grid-item:hover {
+  color: red;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+}
+.center {
+
+  position: absolute;
+  background-color: yellow;
+  top: -1px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: large;
+  width: 1902px;
+}
+
+.firstp{
+  position: absolute;
+  padding: 70px;
+    display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: auto auto auto;
+  top: 390px;
+
+}
+
+.secondp{
+   position: absolute;
+  padding: 70px;
+    display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: auto auto auto;
+  top: 392px;
+}
+
+@media (max-width: 1200px) {
+
+  .grid-container {
+  display: grid;
+  grid-column-gap: 12px;
+  grid-template-columns: auto auto auto;
+  background-image: url("https://innet-media.com/wp-content/uploads/2019/04/featured-image.jpg");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 1200px;
+  height: 1200px; 
+  padding: 80px 5px 5px 5px;
+
+}
+
+.center {
+    width: 1200px;
+}
+}
+
+
+@media (max-width: 992px) {
+
+  .grid-container {
+  display: grid;
+  grid-column-gap: 12px;
+  grid-template-columns: auto;
+  background-image: url("https://innet-media.com/wp-content/uploads/2019/04/featured-image.jpg");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 992px;
+ height: 992px; 
+  padding: 80px 5px 5px 5px;
+
+}
+
+.center {
+    width: 992px;
+}
+.firstp{
+   background-image: url("https://innet-media.com/wp-content/uploads/2019/04/featured-image.jpg");
+  background-repeat: no-repeat;
+   position: absolute;
+  top: 1000px;
+  padding-left: 0;
+    padding: 80px 5px 5px 5px;
+    display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: auto ;
+   width: 992px;
+
+
+}
+
+.secondp{
+   background-image: url("https://innet-media.com/wp-content/uploads/2019/04/featured-image.jpg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 825px;
+padding-left: 0;
+    display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: auto ;
+   width: 992px;
+
+}
+
+}

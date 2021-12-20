@@ -1,0 +1,70 @@
+.body_hide {
+   background-image: url("https://cdn.dribbble.com/users/319473/screenshots/4111136/reinvently_insights_3.0.gif");
+ 
+}
+
+.body_hide {
+  opacity: 0;
+  transition: .7s opacity ease-in-out;
+}
+.body_visible {
+  opacity: 1;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto;
+ background-size: 1500px;
+
+
+ background-repeat: no-repeat;
+  padding: 10px;
+}
+
+.grid-container a {
+text-decoration: none;
+color: red;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid blue;
+  border-radius: 30px;
+color: darkgreen ;
+}
+
+.grid-item a { 
+  color: red;
+  text-decoration: none;
+ }
+
+
+
+.grid-item img{
+  border-radius: 200px;
+
+}
+
+.grid-item:hover {
+  color: red;
+}
+
+
+span{
+  top: 100px;
+}
+
+@media (max-width: 920px) {
+  .grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: auto;
+
+}
+}

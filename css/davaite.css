@@ -1,0 +1,234 @@
+.body_hide {
+    background-image: url("https://cdn.dribbble.com/users/1235346/screenshots/3252385/job.gif");
+  opacity: 0;
+  transition: .7s opacity ease-in-out;
+}
+.body_visible {
+  opacity: 1;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto;
+ 
+ background-size: 1200px;
+
+ background-repeat: no-repeat;
+  padding: 10px;
+}
+
+.grid-container a {
+text-decoration: none;
+color: red;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  font-size: 20px;
+  text-align: center;
+  padding-left: 100px;
+  border: 1px solid blue;
+  border-radius: 10px;
+color: darkgreen ;
+}
+
+.grid-item a { 
+  color: red;
+  text-decoration: none;
+ }
+
+
+
+.grid-item img{
+  border-radius: 50px;
+
+}
+
+.grid-item:hover {
+  color: red;
+}
+
+
+.firstext{
+  position: absolute;
+  left: 60px;
+  top: 155px;
+  background-color: yellow;
+}
+
+.secondtext{
+   position: absolute;
+  left: 1040px;
+  top: 155px;
+  background-color: yellow;
+}
+
+.thirdtext{
+  position: absolute;
+  left: 60px;
+  top: 480px;
+  background-color: yellow;
+}
+
+.fourthtext{
+  position: absolute;
+  left: 1010px;
+  top: 480px;
+  background-color: yellow;
+}
+
+.fifthtext{
+   position: absolute;
+  left: 60px;
+  top: 810px;
+  background-color: yellow;
+}
+
+.sixtext{
+  position: absolute;
+  left: 1010px;
+  top: 810px;
+  background-color: yellow;
+}
+
+@media (max-width: 1278px) {
+
+  .grid-container {
+ 
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto;
+ 
+ background-size: 1200px;
+
+ background-repeat: no-repeat;
+  padding: 10px;
+}
+
+.firstext{
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  left: 40px;
+  top: 100px;
+  background-color: yellow;
+}
+
+.secondtext{
+   position: absolute;
+  width: 100px;
+  height: 150px;
+  left: 690px;
+  top: 100px;
+  background-color: yellow;
+}
+
+.thirdtext{
+  position: absolute;
+   width: 100px;
+  height: 150px;
+  left: 40px;
+  top: 420px;
+  background-color: yellow;
+}
+
+.fourthtext{
+  position: absolute;
+   width: 100px;
+  height: 180px;
+  left: 690px;
+  top: 400px;
+  background-color: yellow;
+}
+
+.fifthtext{
+   width: 100px;
+  height: 180px;
+   position: absolute;
+  left: 40px;
+  top: 730px;
+  background-color: yellow;
+}
+
+.sixtext{
+     width: 100px;
+  height: 180px;
+  position: absolute;
+  left: 690px;
+  top: 730px;
+  background-color: yellow;
+}
+}
+
+@media (max-width: 760px) { 
+
+ .grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto;
+ 
+ background-size: 1200px;
+
+ background-repeat: no-repeat;
+  padding: 10px;
+}
+
+.firstext{
+  position: absolute;
+  width: 100px;
+  height: 160px;
+  left: 30px;
+  top: 90px;
+  background-color: yellow;
+}
+
+.secondtext{
+   position: absolute;
+  width: 100px;
+  height: 150px;
+  left: 428px;
+  top: 90px;
+  background-color: yellow;
+}
+
+.thirdtext{
+  position: absolute;
+   width: 100px;
+  height: 150px;
+  left: 30px;
+  top: 420px;
+  background-color: yellow;
+}
+
+.fourthtext{
+  position: absolute;
+   width: 100px;
+  height: 180px;
+  left: 528px;
+  top: 400px;
+  background-color: yellow;
+}
+
+.fifthtext{
+   width: 90px;
+  height: 200px;
+   position: absolute;
+  left: 40px;
+  top: 730px;
+  background-color: yellow;
+}
+
+.sixtext{
+     width: 100px;
+  height: 180px;
+  position: absolute;
+  left: 528px;
+  top: 730px;
+  background-color: yellow;
+}
+
+}
+

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="shortcut icon" href="images\global-news-4306.svg" type="images/png">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+    <title>Log-in</title>
+    <style>
+        body {
+            
+            background-repeat: no-repeat;
+            background-size: 1300px;
+   font-smoothing: antialiased;
+   
+    
+    font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: .75em;
+    line-height: 1.4;
+    
+}
+
+.foto {
+     background-image: url(https://wallpaperaccess.com/full/958467.jpg);
+            width: 1900px;
+            height: 1000px;
+}
+
+
+.form{
+position: absolute;
+left: 800px;
+text-align: center;
+top: 300px;
+}
+
+
+label{
+    background-color: lightpink;
+    font-size: large;
+}
+
+input{
+    font-size: large;
+    text-align: center;
+    border: solid;
+    border-color: green;
+    border-radius: 100px;
+    padding: 17px;
+}
+
+
+
+.projects {
+    margin: 100px auto 30px;
+}
+
+.login-ways p, .signin {
+    text-align: center;
+}
+
+
+button{
+    background-color: orange;
+    font-size: large;
+border-radius: 50px;
+}
+
+div {
+    display: block;
+}
+
+img{
+    position: absolute;
+    left: 600px;
+    bottom: 540px;
+    width: 350px;
+    height: 40px;
+}
+
+@media (max-width: 1324px) {
+
+.foto {
+            width: 1524px;
+            height: 1200px;
+}
+
+.form{
+position: absolute;
+left: 680px;
+text-align: center;
+top: 300px;
+}
+}
+
+@media (max-width: 1024px) {
+
+.foto {
+            width: 1024px;
+            height: 1200px;
+}
+
+.form{
+position: absolute;
+left: 380px;
+text-align: center;
+top: 300px;
+}
+}
+
+@media (max-width: 768px) {
+
+.foto {
+            width: 768px;
+            height: 100%;
+}
+
+.form{
+position: absolute;
+left: 280px;
+text-align: center;
+top: 300px;
+}
+}
+
+
+@media (max-width: 568px) {
+
+.foto {
+            width: 568px;
+            height: 100%;
+}
+
+.form{
+position: absolute;
+left: 180px;
+text-align: center;
+top: 300px;
+}
+}
+
+#canvas{
+position: absolute;
+left: 800px;
+top: 200px;
+width: 5000px;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <div class="foto">
+
+     <script >
+    var img = new Image();
+
+// User Variables - customize these to change the image being scrolled, its
+// direction, and the speed.
+
+img.src = 'https://avatars.mds.yandex.net/i?id=135d68b13b6de8fd5095338e4a7c57c2-4478399-images-thumbs&n=13';
+var CanvasXSize = 100;
+var CanvasYSize = 80;
+var speed = 30; //lower is faster
+var scale = 0.12;
+var y = -4.5; //vertical offset
+
+// Main program
+
+var dx = 0.75;
+var imgW;
+var imgH;
+var x = 0;
+var clearX;
+var clearY;
+var ctx;
+
+img.onload = function() {
+    imgW = img.width*scale;
+    imgH = img.height*scale;
+    if (imgW > CanvasXSize) { x = CanvasXSize-imgW; } // image larger than canvas
+    if (imgW > CanvasXSize) { clearX = imgW; } // image larger than canvas
+    else { clearX = CanvasXSize; }
+    if (imgH > CanvasYSize) { clearY = imgH; } // image larger than canvas
+    else { clearY = CanvasYSize; }
+    //Get Canvas Element
+    ctx = document.getElementById('canvas').getContext('2d');
+    //Set Refresh Rate
+    return setInterval(draw, speed);
+}
+
+function draw() {
+    //Clear Canvas
+    ctx.clearRect(0,0,clearX,clearY);
+    //If image is <= Canvas Size
+    if (imgW <= CanvasXSize) {
+        //reset, start from beginning
+        if (x > (CanvasXSize)) { x = 0; }
+        //draw aditional image
+        if (x > (CanvasXSize-imgW)) { ctx.drawImage(img,x-CanvasXSize+1,y,imgW,imgH); }
+    }
+    //If image is > Canvas Size
+    else {
+        //reset, start from beginning
+        if (x > (CanvasXSize)) { x = CanvasXSize-imgW; }
+        //draw aditional image
+        if (x > (CanvasXSize-imgW)) { ctx.drawImage(img,x-imgW+1,y,imgW,imgH); }
+    }
+    //draw image
+    ctx.drawImage(img,x,y,imgW,imgH);
+    //amount to move
+    x += dx;
+}
+  </script>
+
+  <canvas id="canvas" width="1900" height="1000"></canvas>
+
+        <div id='loginError'></div>
+
+
+        <div class="form-container">
+            <form id="form2" class="form">
+                
+               
+            
+                 <div class="formlabel">
+                    
+                        <label for="email">Email</label><br>
+                        <input type="text" id="email" placeholder="Enter your email adress"/><br>
+                        <span></span><br>
+                    </div>
+<br>
+            
+                    <div class="formlabel">
+                        <label for="password">Password</label><br>
+                        <input type="password" id="password" placeholder="Enter your password"/><br>
+                        <span></span><br>
+                    </div>
+                    
+                <br>
+          
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+    
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+    <script src="js/script.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/1.6.1/kute.min.js"></script>
+
+
+
+</body>
+
+</html>
